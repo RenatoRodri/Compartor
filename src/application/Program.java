@@ -21,10 +21,7 @@ public class Program {
 		list.add(new Product("Smart Tv", 4000.00));
 		list.add(new Product("Telefone", 1500.00));
 		
-		Comparator <Product> comp = (p1,p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-		
-		list.sort(comp);
-		
+		list.sort((p1,p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 		
 		for(Product p: list) {
 			System.out.println(p);
